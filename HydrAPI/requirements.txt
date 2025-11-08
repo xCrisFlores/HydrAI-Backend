@@ -1,0 +1,10 @@
+requests
+supabase
+dotenv
+quart
+quart-cors
+python-dotenv
+numpy
+pytz
+PyJWT
+bcrypt

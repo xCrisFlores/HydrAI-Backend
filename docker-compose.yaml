@@ -1,0 +1,44 @@
+services:
+  hydr_api:
+    build: ./HydrAPI
+    container_name: hydr_api
+    ports:
+      - "8001:8000"
+    networks:
+      - hydranet
+    env_file:
+      - ./HydrAPI/.env
+
+  hydr_net:
+    build: ./HydrAINet
+    container_name: hydr_net
+    ports:
+      - "8002:8000"
+    networks:
+      - hydranet
+    env_file:
+      - ./HydrAINet/.env
+
+  hydr_lstm:
+    build: ./HydrAILSTM
+    container_name: hydr_lstm
+    ports:
+      - "8003:8000"
+    networks:
+      - hydranet
+    env_file:
+      - ./HydrAILSTM/.env
+
+  hydr_ws:
+    build: ./Websocket
+    container_name: hydr_ws
+    ports:
+      - "8000:8000"
+    networks:
+      - hydranet
+    env_file:
+      - ./Websocket/.env
+
+networks:
+  hydranet:
+    driver: bridge

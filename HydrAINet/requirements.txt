@@ -1,0 +1,12 @@
+requests
+scikit-learn
+supabase
+dotenv
+quart
+quart-cors
+python-dotenv
+numpy
+pytz
+PyJWT
+tensorflow
+pandas
